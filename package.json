@@ -1,0 +1,19 @@
+{
+  "name": "rooftop-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julioale21/rooftop-backend.git"
+  },
+  "author": "julio romero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julioale21/rooftop-backend/issues"
+  },
+  "homepage": "https://github.com/julioale21/rooftop-backend#readme"
+}
