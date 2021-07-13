@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/julioale21/rooftop-backend/issues"
   },
-  "homepage": "https://github.com/julioale21/rooftop-backend#readme"
+  "homepage": "https://github.com/julioale21/rooftop-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
