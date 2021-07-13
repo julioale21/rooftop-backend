@@ -7,9 +7,11 @@ function authorization(req, res, next) {
     if (req.headers.authorization === "Bearer 65a83e72c7e990a3e6565ae8b7cc071c") {
       next()
     } else {
-      res.status(403).send("Forbidden")
+      res.status(403).json("Forbidden")
     }
-    res.status(400).send("Bad request. Must provided authorization token")
+    
+  } else {
+    res.status(403).json('No token provided');
   }
 }
 
