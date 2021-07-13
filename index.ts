@@ -19,7 +19,6 @@ function authorization(req, res, next) {
 function log(req, res, next) {
   const today = new Date();
   const fileName = today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() + ".log"
-  console.log(req.url)
   const message = `${req.params.ip}, ${today.toString()}, ${req.method}, ${req.url}`
 
   writeFileSync(fileName, message)
