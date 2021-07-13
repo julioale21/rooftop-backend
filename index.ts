@@ -1,4 +1,5 @@
 import * as express from "express";
+import { writeFileSync } from "fs";
 
 const app = express();
 
@@ -14,6 +15,19 @@ function authorization(req, res, next) {
     res.status(403).json('No token provided');
   }
 }
+
+function log(req, res, next) {
+  const today = new Date();
+  const fileName = today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate() + ".log"
+  console.log(req.url)
+  const message = `${req.params.ip}, ${today.toString()}, ${req.method}, ${req.url}`
+
+  writeFileSync(fileName, message)
+
+  next();
+}
+
+app.use(log);
 
 app.use(authorization);
 
